@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Menu</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #3498db;
+        }
+
+        /* Containers para os menus */
+        .menu-container {
+            display: none;
+            padding: 20px;
+        }
+
+        /* Estilo do slider */
+        .slider {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .menu-item {
+            background-color: #34495e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 280px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item h3 {
+            color: #ecf0f1;
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: #2c3e50;
+            width: 100%;
+            margin: 0;
+        }
+
+        .menu-item .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 8px 16px;
+            width: 160px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            filter: brightness(110%);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px; /* Aumentei um pouco a altura da imagem */
+            object-fit: cover; /* Ajusta para que a imagem preencha o espaço sem distorcer */
+        }
+
+        /* Estilos para os menus */
+        .menu-container h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-container {
+                padding: 20px;
+            }
+
+            .menu-item {
+                width: 250px;
+                height: 320px;
+            }
+
+            .navbar a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" onclick="showMenu('comidas')">Comidas</a>
+        <a href="#" onclick="showMenu('sobremesas')">Sobremesas</a>
+        <a href="#" onclick="showMenu('bebidas')">Bebidas</a>
+    </div>
+
+    <!-- Página de boas-vindas -->
+    <div class="menu-container" id="boas-vindas">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <h2>Que bom que você chegou!</h2>
+        <p>Esperamos que você tenha uma ótima experiência em nosso site.</p>
+        <p id="boas-vindas"></p>
+        <button onclick="saudarUsuario()">Clique para receber uma saudação personalizada</button>
+        <button onclick="showMenu('comidas')">Ir ao Menu de Comidas</button>
+    </div>
+
+    <!-- Menu de Comidas -->
+    <div class="menu-container" id="comidas">
+        <h1>Menu de Comidas</h1>
+        <div class="slider">
+            <div class="menu-item">
+                <img src="https://d2ova09jg8x3xk.cloudfront.net/rocketboypizza.com/maroubra/uploads/Margherita_-_web.png" alt="Pizza Margherita">
+                <h3>Pizza Margherita</h3>
+                <div class="price">R$ 39,90</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://s2.glbimg.com/J37rcGJSqqOBHXy7PtN1JGOCgww=/620x455/e.glbimg.com/og/ed/f/original/2020/09/03/bacon_burger_-_01.jpg" alt="Hambúrguer">
+                <h3>Hambúrguer</h3>
+                <div class="price">R$ 29,90</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/originals/30/37/e1/3037e11ae78b0d2b8c8c7b8056ab31e1.jpg" alt="Salada">
+                <h3>Salada</h3>
+                <div class="price">R$ 23,00</div>
+            </div>
+            <!-- Novos Itens -->
+            <div class="menu-item">
+                <img src="https://koi.com.br/wp-content/uploads/2020/09/combinado-sushi-especial-para-2.jpg" alt="Sushi Especial">
+                <h3>Sushi Especial</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://img.cybercook.com.br/foodiefeed/k3jnvcftqnqodhgjgxu01pgantzxdi9mzbvfxbiv.jpeg" alt="Prato de Carne com Arroz">
+                <h3>Prato de Carne com Arroz</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://3.bp.blogspot.com/-ro7tlIDVreI/VvrV4voxVXI/AAAAAAAAALI/-NWA_0WfmdIw5cB7tFLbH4-tt_A7Uej1A/s1600/img_1194987816767348.jpeg" alt="Espaguete à Carbonara">
+                <h3>Espaguete à Carbonara</h3>
+                <div class="price">R$ 21,00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu de Sobremesas -->
+    <div class="menu-container" id="sobremesas">
+        <h1>Sobremesas</h1>
+        <div class="slider">
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/75/cb/5d/75cb5d98fc8bc7f0167238b6cafccfb9.jpg" alt="Sobremesa de Chocolate">
+                <h3>Sobremesa de Chocolate</h3>
+                <div class="price">R$ 19,90</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/e8/6a/20/e86a201cdef0e26262e27420d4861b17.jpg" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <div class="price">R$ 24,90</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/9a/27/10/9a271084b6b2e8d78739b30a9c7bd67b.jpg" alt="Pavê de Chocolate">
+                <h3>Pavê de Chocolate</h3>
+                <div class="price">R$ 22,90</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu de Bebidas -->
+    <div class="menu-container" id="bebidas">
+        <h1>Bebidas</h1>
+        <div class="slider">
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/c4/33/86/c433864e6c61c6cd4611d2cf80328e3d.jpg" alt="Refrigerante">
+                <h3>Refrigerante</h3>
+                <div class="price">R$ 12,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/2a/7d/5c/2a7d5c09b3ace6163efb1617a77f9971.jpg" alt="Drink">
+                <h3>água-mineral</h3>
+                <div class="price">R$ 3,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/9e/5f/03/9e5f038b8d083bd38582aa42cfb6e995.jpg" alt="Água Mineral">
+                <h3>suco natural</h3>
+                <div class="price">R$ 10,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/0f/bb/c1/0fbbc11a5843f0e0cd1f44b7f1cb48da.jpg" alt="Chá Gelado">
+                <h3>Chá Gelado</h3>
+                <div class="price">R$ 9,00</div>
+            </div>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/1200x/de/6e/c7/de6ec7535cd6cfbfa12de80e597d8c3a.jpg" alt="Suco Natural">
+                <h3>drink</h3>
+                <div class="price">R$ 16,00</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMenu(menu) {
+            const pages = document.querySelectorAll('.menu-container');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(menu).style.display = 'block';
+        }
+
+        function saudarUsuario() {
+            document.getElementById("boas-vindas").innerText = "Olá, seja bem-vindo!";
+        }
+
+        // Exibe a página inicial de boas-vindas por padrão
+        showMenu('boas-vindas');
+    </script>
+</body>
+
+</html>r
