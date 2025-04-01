@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas</title>
+    <style>
+        /* Resetando algumas propriedades padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 50px 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colunas, ajustando automaticamente */
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            aria-label: "Item do menu de bebidas"; /* Acessibilidade */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item h3 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff; /* Cor do preço em branco */
+            background-color: rgba(169, 169, 169, 0.6); /* Cor cinza transparente */
+            border-radius: 8px;
+            padding: 8px 16px; /* Maior padding para um quadrado mais largo */
+            width: 160px; /* Quadrado mais largo */
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            text-align: center;
+        }
+
+        /* Quadrado único para Refrigerantes com a imagem de fundo */
+        .refrigerantes {
+            background-image: url('https://i.pinimg.com/1200x/c4/33/86/c433864e6c61c6cd4611d2cf80328e3d.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .refrigerantes:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Quadrado para Drink com a imagem de fundo */
+        .drink {
+            background-image: url('https://i.pinimg.com/1200x/de/6e/c7/de6ec7535cd6cfbfa12de80e597d8c3a.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .drink:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Quadrado para Água Mineral com a imagem de fundo */
+        .agua-mineral {
+            background-image: url('https://i.pinimg.com/1200x/2a/7d/5c/2a7d5c09b3ace6163efb1617a77f9971.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .agua-mineral:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Quadrado para Suco Natural com a imagem de fundo */
+        .suco-natural {
+            background-image: url('https://i.pinimg.com/1200x/9e/5f/03/9e5f038b8d083bd38582aa42cfb6e995.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .suco-natural:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Quadrado para Chá Gelado com a imagem de fundo */
+        .cha-gelado {
+            background-image: url('https://i.pinimg.com/1200x/0f/bb/c1/0fbbc11a5843f0e0cd1f44b7f1cb48da.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cha-gelado:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Melhorias para responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                margin: 30px 0;
+            }
+
+            .menu-container {
+                padding: 20px 5%;
+            }
+
+            .menu-item h3 {
+                font-size: 1.6em;
+            }
+
+            .menu-item .price {
+                font-size: 1.2em;
+                padding: 6px 12px;
+                width: 140px; /* Ajustando o tamanho do quadrado em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .menu-container {
+                padding: 10px 5%;
+            }
+
+            .menu-item h3 {
+                font-size: 1.4em;
+            }
+
+            .menu-item .price {
+                font-size: 1em;
+                padding: 4px 10px;
+                width: 120px; /* Ajustando ainda mais o tamanho do quadrado */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bebidas</h1>
+    <div class="menu-container">
+        <div class="menu-item refrigerantes">
+            <h3>Refrigerantes</h3>
+            <div class="price">R$ 8,00</div>
+        </div>
+
+        <div class="menu-item drink">
+            <h3>Drink</h3>
+            <div class="price">R$ 16,00</div>
+        </div>
+
+        <div class="menu-item agua-mineral">
+            <h3>Água Mineral</h3>
+            <div class="price">R$ 2,00</div>
+        </div>
+
+        <div class="menu-item suco-natural">
+            <h3>Suco Natural</h3>
+            <div class="price">R$ 4,50</div>
+        </div>
+
+        <div class="menu-item cha-gelado">
+            <h3>Chá Gelado</h3>
+            <div class="price">R$ 3,80</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
