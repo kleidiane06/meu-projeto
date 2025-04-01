@@ -1,0 +1,79 @@
+<div><br class="Apple-interchange-newline"><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Comidas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 10%;
+        }
+
+        .menu-item {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            filter: brightness(0.8);
+        }
+
+        .menu-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .pizza-item { background-image: url('https://d2ova09jg8x3xk.cloudfront.net/rocketboypizza.com/maroubra/uploads/Margherita_-_web.png'); }
+        .burger-item { background-image: url('https://s2.glbimg.com/J37rcGJSqqOBHXy7PtN1JGOCgww=/620x455/e.glbimg.com/og/ed/f/original/2020/09/03/bacon_burger_-_01.jpg'); }
+        .sushi-item { background-image: url('https://koi.com.br/wp-content/uploads/2020/09/combinado-sushi-especial-para-2.jpg'); }
+        .salad-item { background-image: url('https://i.pinimg.com/originals/30/37/e1/3037e11ae78b0d2b8c8c7b8056ab31e1.jpg'); }
+        .rice-item { background-image: url('https://img.cybercook.com.br/foodiefeed/k3jnvcftqnqodhgjgxu01pgantzxdi9mzbvfxbiv.jpeg'); }
+        .pasta-item { background-image: url('https://3.bp.blogspot.com/-ro7tlIDVreI/VvrV4voxVXI/AAAAAAAAALI/-NWA_0WfmdIw5cB7tFLbH4-tt_A7Uej1A/s1600/img_1194987816767348.jpeg'); }
+    </style>
+</head>
+<body>
+    <h1>Menu de Comidas</h1>
+    <div class="menu-container">
+        <div class="menu-item pizza-item"><h3>Pizza Margherita</h3><div class="price">R$ 39,90</div></div>
+        <div class="menu-item burger-item"><h3>Hambúrguer Cheddar</h3><div class="price">R$ 29,90</div></div>
+        <div class="menu-item sushi-item"><h3>Sushi Especial</h3><div class="price">R$ 49,90</div></div>
+        <div class="menu-item salad-item"><h3>Salada de Frango</h3><div class="price">R$ 24,90</div></div>
+        <div class="menu-item rice-item"><h3>Prato de Carne com Arroz</h3><div class="price">R$ 44,90</div></div>
+        <div class="menu-item pasta-item"><h3>Espaguete à Carbonara</h3><div class="price">R$ 34,90</div></div>
+    </div>
+</body>
+</html></div>
