@@ -211,26 +211,31 @@
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/c4/33/86/c433864e6c61c6cd4611d2cf80328e3d.jpg" alt="Refrigerante">
                 <h3>Refrigerante</h3>
+                <button class="btn-comprar">Comprar</button>
                 <div class="price">R$ 12,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/2a/7d/5c/2a7d5c09b3ace6163efb1617a77f9971.jpg" alt="Drink">
                 <h3>água-mineral</h3>
+                <button class="btn-comprar">Comprar</button>
                 <div class="price">R$ 3,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/9e/5f/03/9e5f038b8d083bd38582aa42cfb6e995.jpg" alt="Água Mineral">
                 <h3>suco natural</h3>
+                <button class="btn-comprar">Comprar</button>
                 <div class="price">R$ 10,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/0f/bb/c1/0fbbc11a5843f0e0cd1f44b7f1cb48da.jpg" alt="Chá Gelado">
                 <h3>Chá Gelado</h3>
+                <button class="btn-comprar">Comprar</button>
                 <div class="price">R$ 9,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/de/6e/c7/de6ec7535cd6cfbfa12de80e597d8c3a.jpg" alt="Suco Natural">
                 <h3>drink</h3>
+                <button class="btn-comprar">Comprar</button>
                 <div class="price">R$ 16,00</div>
             </div>
         </div>
@@ -252,4 +257,5 @@
     </script>
 </body>
 
-</html>r
+</html>
+
