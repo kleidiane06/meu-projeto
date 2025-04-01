@@ -1,0 +1,172 @@
+<div><br class="Apple-interchange-newline"><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobremesas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 50px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            aria-label: "Item do menu de sobremesas"; /* Acessibilidade */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px) rotate(5deg); /* Adicionada rotação sutil no hover */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            filter: brightness(110%); /* Efeito de brilho */
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: rgba(169, 169, 169, 0.6); /* Cor cinza transparente */
+            border-radius: 8px;
+            padding: 8px 16px; /* Maior padding para um quadrado mais largo */
+            width: 160px; /* Quadrado mais largo */
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            text-align: center;
+        }
+
+        .menu-item {
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .dessert-chocolate { background-image: url('https://i.pinimg.com/1200x/75/cb/5d/75cb5d98fc8bc7f0167238b6cafccfb9.jpg'); }
+        .dessert-tiramisu { background-image: url('https://i.pinimg.com/1200x/e8/6a/20/e86a201cdef0e26262e27420d4861b17.jpg'); }
+        .dessert-pave { background-image: url('https://i.pinimg.com/1200x/9a/27/10/9a271084b6b2e8d78739b30a9c7bd67b.jpg'); }
+        .dessert-cheesecake { background-image: url('https://i.pinimg.com/1200x/5e/a0/b3/5ea0b32889b19e444df01a69c5e5a1f2.jpg'); }
+        .dessert-pudim { background-image: url('https://i.pinimg.com/1200x/50/d7/24/50d724c1c972d51842d8de42f55b2aeb.jpg'); }
+
+        /* Melhorias para responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+                margin: 30px 0;
+            }
+
+            .menu-container {
+                padding: 20px 5%;
+            }
+
+            .menu-item h3 {
+                font-size: 1.6em;
+            }
+
+            .menu-item .price {
+                font-size: 1em;
+                padding: 6px 12px;
+                width: 140px; /* Ajustando o tamanho do quadrado em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .menu-container {
+                padding: 10px 5%;
+            }
+
+            .menu-item h3 {
+                font-size: 1.4em;
+            }
+
+            .menu-item .price {
+                font-size: 0.9em;
+                padding: 5px 10px;
+                width: 130px; /* Ajustando o tamanho do quadrado em telas muito pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sobremesas</h1>
+    <div class="menu-container">
+        <div class="menu-item dessert-chocolate">
+            <h3>Sobremesa de Chocolate</h3>
+            <div class="price">R$ 19,90</div>
+        </div>
+        <div class="menu-item dessert-tiramisu">
+            <h3>Tiramisu</h3>
+            <div class="price">R$ 24,90</div>
+        </div>
+        <div class="menu-item dessert-pave">
+            <h3>Pavê de Chocolate</h3>
+            <div class="price">R$ 22,90</div>
+        </div>
+        <div class="menu-item dessert-cheesecake">
+            <h3>Cheesecake</h3>
+            <div class="price">R$ 29,90</div>
+        </div>
+        <div class="menu-item dessert-pudim">
+            <h3>Pudim de Leite Condensado</h3>
+            <div class="price">R$ 15,90</div>
+        </div>
+    </div>
+</body>
+</html></div>
