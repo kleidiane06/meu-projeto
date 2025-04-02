@@ -255,7 +255,7 @@
         <h1>Bebidas</h1>
         <div class="slider">
             <div class="menu-item">
-                <img src="https://i.pinimg.com/1200x/0f/bb/c1/0fbbc11a5843f0e0cd1f44b7f1cb48da.jpg" alt="Drink">
+                <img src="https://i.pinimg.com/1200x/de/6e/c7/de6ec7535cd6cfbfa12de80e597d8c3a.jpg" alt="Drink">
                 <h3>Drink</h3>
                 <div class="price">R$ 16,00</div>
                 <button class="buy-button">Comprar</button>
